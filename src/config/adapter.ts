@@ -3,6 +3,7 @@ const nunjucks = require('think-view-nunjucks')
 const fileSession = require('think-session-file')
 const mysql = require('think-model-mysql')
 const path = require('path')
+const ws = require('think-websocket-ws')
 import { think } from "thinkjs"
 const isDev = think.env === "development"
 
@@ -79,5 +80,25 @@ exports.view = {
   },
   nunjucks: {
     handle: nunjucks
+  }
+}
+
+/**
+ * webscoket adapter config
+ * @type {Object}
+ */
+exports.websocket = {
+  type: 'ws',
+  common: {
+    // common config
+  },
+  ws: {
+    handle: ws,
+    path: '/ws',
+    messages: [{
+      close: '/ws/close',
+      open: '/ws/open',
+      addUser: '/ws/addUser'
+    }]
   }
 }
