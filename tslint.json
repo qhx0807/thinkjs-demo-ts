@@ -17,7 +17,8 @@
         "eofline": false,
         "quotemark": false,
         "semicolon": [true, "never"],
-        "space-before-function-paren": true
+        "space-before-function-paren": true,
+        "no-console": false
     },
     "rulesDirectory": []
 }
