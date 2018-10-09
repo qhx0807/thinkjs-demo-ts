@@ -4,8 +4,8 @@ const fileSession = require('think-session-file')
 const mysql = require('think-model-mysql')
 const path = require('path')
 const ws = require('think-websocket-ws')
-import { think } from "thinkjs"
-const isDev = think.env === "development"
+import { think } from 'thinkjs'
+const isDev = think.env === 'development'
 
 /**
  * cache adapter config
@@ -95,10 +95,12 @@ exports.websocket = {
   ws: {
     handle: ws,
     path: '/ws',
-    messages: [{
-      close: '/ws/close',
-      open: '/ws/open',
-      addUser: '/ws/addUser'
-    }]
+    messages: [
+      {
+        close: '/ws/close',
+        open: '/ws/open',
+        addUser: '/ws/addUser'
+      }
+    ]
   }
 }
