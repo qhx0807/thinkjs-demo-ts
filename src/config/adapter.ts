@@ -37,13 +37,13 @@ exports.model = {
   },
   mysql: {
     handle: mysql,
-    database: 'bing',
+    database: 'demo',
     prefix: '',
     encoding: 'utf8',
-    host: '127.0.0.1',
-    port: '3306',
+    host: 'cdb-83fyyuko.cd.tencentcdb.com',
+    port: '10029',
     user: 'root',
-    password: 'qhx0807',
+    password: 'qhx0807+',
     dateStrings: true
   }
 }

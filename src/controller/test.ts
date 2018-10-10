@@ -6,4 +6,7 @@ export default class extends Base {
     const a = think.uuid()
     this.success({saa: a})
   }
+  testAction () {
+    this.fail("12")
+  }
 }

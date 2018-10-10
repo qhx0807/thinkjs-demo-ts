@@ -22,7 +22,10 @@ module.exports = [
     handle: 'trace',
     enable: !think.isCli,
     options: {
-      debug: isDev
+      debug: true,
+      error (err: Error) {
+        console.error(err)
+      }
     }
   },
   {
